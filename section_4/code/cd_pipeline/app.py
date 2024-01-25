@@ -1,7 +1,9 @@
 from flask import Flask, render_template
+from flask_cors import CORS
 import random
 
 app = Flask(__name__)
+cors = CORS(app)
 
 # list of cat images
 images = [
