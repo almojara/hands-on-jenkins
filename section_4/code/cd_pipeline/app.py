@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from flask_cors import CORS, cross_origin
 import random
 
 app = Flask(__name__)
@@ -22,7 +21,6 @@ images = [
 ]
 
 @app.route('/')
-@cross_origin()
 def index():
     url = random.choice(images)
     return render_template('index.html', url=url)
