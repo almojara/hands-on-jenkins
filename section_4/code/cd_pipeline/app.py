@@ -3,7 +3,10 @@ from flask_cors import CORS
 import random
 
 app = Flask(__name__)
-cors = CORS(app)
+cors = CORS(app, origins=[
+    "http://www.catshaming.co.uk",
+    # Add more origins as needed
+])
 
 # list of cat images
 images = [
